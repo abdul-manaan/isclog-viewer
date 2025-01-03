@@ -21,6 +21,10 @@ Once you have the .isclog file and have installed the extension, you can view th
 
 Note: I have tested this on the latest version on healthshare (HS 2024.1), and should work with all IRIS based products.
 
+## DEMO
+
+![](https://github.com/abdul-manaan/isclog-viewer/blob/main/media/demo.gif)
+
 ## Features
 
 These are the different fields that are fetched from the ISCLOGs and displayed in tabular form:
