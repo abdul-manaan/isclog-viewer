@@ -23,7 +23,7 @@ Note: I have tested this on the latest version on healthshare (HS 2024.1), and s
 
 ## DEMO
 
-![](https://github.com/abdul-manaan/isclog-viewer/blob/main/media/demo.gif)
+![](https://raw.githubusercontent.com/abdul-manaan/isclog-viewer/refs/heads/main/media/demo.gif)
 
 ## Features
 

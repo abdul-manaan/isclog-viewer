@@ -13,5 +13,5 @@ All notable changes to the "isclog-viewer" extension will be documented in this 
 ## [1.0.1]
 
 - Fixed Minor Bug
-- Updated REDME
+- Updated README
 
