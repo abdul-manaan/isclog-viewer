@@ -59,4 +59,4 @@ open file:"wns" use file zw ^ISCLOG close file
 
 Initial release of isclog-viewer.
 
-**Chao!**
+**Ciao!**
