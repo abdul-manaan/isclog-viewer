@@ -12,10 +12,11 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
+    "customEditors": [
       {
-        "command": "isclog-viewer.helloWorld",
-        "title": "Hello World"
+        "viewType": "iscLogViewer.isclog",
+        "displayName": "InterSystems ISCLOG Viewer",
+        "selector": [{ "filenamePattern": "*.isclog" }]
       }
     ]
   },
