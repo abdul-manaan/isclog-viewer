@@ -1,71 +1,62 @@
 # isclog-viewer README
 
-This is the README for your extension "isclog-viewer". After writing up a brief description, we recommend including the following sections.
+This is a basic extension to view isclogs in CSV Format.
+
+It will parse an ISCLOG in a *.isclog file and shows different fields in the logs in tabular form for easier reading.
+
+To export the ISCLog global in the correct format run the following commands:
+
+```ObjectScript
+set file = "filepath/filename.isclog" 
+open file:"wns" use file zw ^ISCLOG close file
+```
+
+Once you have the .isclog file and have installed the extension, you can view the file using the `isclog-viewer` extension.
+
+# How to open .isclog in isclog-viewer?
+0. Make sure you have installed the extension.
+1. Open the file in the VS Code.
+2. Right-Click the filename in Explorer, and click "Reopen Editor with..."
+3. Select "InterSystems ISCLOG viewer".
+
+Note: I have tested this on the latest version on healthshare (HS 2024.1), and should work with all IRIS based products.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+These are the different fields that are fetched from the ISCLOGs and displayed in tabular form:
+1. ID
+2. LogLevel
+3. Category
+4. Message
+5. Pid
+6. Namespace
+7. TimeAdded
+8. Routine
+9. Tag
+10. SessionId
+11. ClassName
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- The extension also removes those rows from display that does not contain above information.
+- It only displays those rows that are of the form: 
+```
+^ISCLOG("Data",<ID>)=$lb(...)
+```
+- An empty cell or "" displays a missing value for that particular field in the log.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- It only works for .isclog files.
+- The ISCLOGs must be exported as follows:
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+```ObjectScript
+set file = "C:\InterSystems\IRIS\sample.isclog" 
+open file:"wns" use file zw ^ISCLOG close file
+```
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
+Initial release of isclog-viewer.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Chao!**
